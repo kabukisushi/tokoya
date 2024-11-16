@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/* CSS Document */
+.section-about__image {
+  width: 95vw;
+  margin: 0 0 0 auto;
+}
+.section-about__image img {
+  height: auto;
+  width: 100%;
+  max-height: 750px;
+  object-fit: cover;
+}
+.section-about__msg {
+  margin: 0 auto;
+  width: 90vw;
+  border-bottom: solid 1px #333;
+  padding: 50px 0 40px;
+}
+.section-about__msg h2 {
+  padding-bottom: 20px;
+}
+.section-about__msg p {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 500px;
+}
+@media(min-width: 800px) {
+  .section-about__msg p {
+    max-width: 1000px;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  td, th {
+    font-size: 1.6rem;
+  }
+  .section-about__msg {
+    display: flex;
+    width: 70vw;
+    max-width: 1100px;
+    padding: 100px 0 80px 0;
+  }
+  .section-about__msg h2 {
+    padding-top: 5px;
+  }
+  .section-about__msg p {
+    margin-left: 100px;
+  }
+}
+.section-img__flex {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.l-img img {
+  width: 90vw;
+  object-fit: cover;
+}
+.r-text {
+  text-align: left;
+  padding-top: 30px;
+  max-width: 500px;
+}
+.bar-flex {
+  display: flex;
+  width: 95vw;
+  margin: 0 auto 0 0;
+}
+.bar-flex img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+@media(min-width: 800px) {
+  .section-img__flex {
+    display: flex;
+    align-items: flex-end;
+    width: 70vw;
+    margin-top: 100px;
+  }
+  .l-img img {
+    width: 35vw;
+  }
+  .r-text {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 5%;
+  }
+  .bar-flex img {
+    margin-top: 120px;
+  }
+}
+@media(max-width: 1040px) {
+  .r-text p {
+    font-size: 1.4rem;
+  }
+}
+.section-map {
+  width: 90vw;
+  margin: 0 auto;
+}
+.contents_wrapper {
+  margin-top: 60px;
+}
+.info {
+  margin-top: 30px;
+}
+.info_area .photo img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+.info_area .info table {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+.info_area .info table tbody tr:first-child th, #access .info_area .info table tbody tr:first-child td {
+  padding: 0 5px 20px;
+}
+.info_area .info table tbody tr:first-child td {
+  padding: 0 5px 20px;
+}
+.info_area .info table th, #access .info_area .info table td {
+  padding: 15px 5px;
+  border-bottom: dotted 1px #DEDEDE;
+}
+.map {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 45%;
+  position: relative;
+  margin-top: 40px;
+}
+.map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+@media(min-width: 800px) {
+  .info {
+    margin: 0px;
+  }
+  .info_area .info {
+    display: flex;
+    align-items: end;
+    width: 50%;
+  }
+  .section-map {
+    width: 70vw;
+  }
+  .contents_wrapper {
+    margin-top: 120px;
+  }
+  .info_area {
+    display: flex;
+    justify-content: space-between;
+  }
+  .info_area .photo {
+    width: 45%;
+  }
+  .photo img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+  }
+  .map {
+    margin-top: 80px;
+  }
+}
+.wrapper {
+  overflow: hidden;
+}
+/* fadeUp */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+.box {
+  opacity: 0;
+}
+/*==================================================
+動かしたい動き（今回は” ふわっ” を採用）
+===================================*/
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0/8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

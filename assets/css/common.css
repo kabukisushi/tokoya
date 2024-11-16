@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFFCF6;
+}
+body {
+  color: #1C1C1C; /* RGB */
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 3rem;
+  text-align: center;
+  padding-top: 100px;
+}
+@media (max-width: 600px) {
+  body {
+    padding-top: 80px;
+  }
+}
+h2 {
+  font-size: 2.4rem;
+  font-family: "ヒラギノ角ゴシック"
+}
+p {
+  font-size: 1.4rem;
+}
+td, th {
+  text-align: left;
+  font-size: 1.4rem;
+}
+a:hover {
+  opacity: 0.5;
+}
+li {
+  list-style: none;
+}
+.none {
+  display: none;
+}
+.header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  z-index: 1000;
+}
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 90vw;
+}
+.header__navigation ul {
+  margin-top: 27px;
+}
+.header__navigation ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.header__navigation ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  border-bottom: 2px solid;
+  padding: 0 50px 5px 0;
+  font-family: "ヒラギノ角ゴシック"
+}
+.logo {
+  height: 70px;
+  margin-top: 5px;
+}
+@media (max-width: 600px) {
+  .header {
+    height: 60px;
+  }
+  .logo {
+    height: 50px;
+  }
+}
+#footer {
+  border-top: solid 5px #c3c3c3;
+  margin-top: 80px;
+  background-color: #fff;
+}
+.footer-in {
+  padding-top: 80px;
+  font-size: 1.4rem
+}
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 90vw;
+  padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+  #footer {
+  margin-top: 50px;
+  }}
+.decoration img {
+  height: 100px;
+}
+.pagetop {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 50px;
+  bottom: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 1040px) {
+  .decoration img {
+    height: 80px;
+  }
+  .pagetop {
+    right: 25px;
+    bottom: 30px;
+  }
+  /* ハンバーガーアイコン　*/
+  #nav-drawer {
+    padding-top: 27px;
+    text-align: right;
+    position: relative;
+  }
+  #nav-open {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+  }
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    background-color: #000000;
+    display: block;
+    border-radius: 10px;
+    content: "";
+  }
+  #nav-open span:before {
+    bottom: -24px;
+  }
+  #nav-open span:after {
+    bottom: -12px;
+  }
+  #nav-close {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  #nav-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    text-align: left;
+    padding: 20px 0 0 24px;
+    transform: translateX(-110%);
+    transition: 0.3s ease-in-out;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+  }
+  .nav-drawer__title {
+    display: block;
+  }
+  .nav-drawer__title img {
+    width: 120px;
+    height: 100%;
+    margin: 10px 0 30px;
+  }
+  #nav-content ul li {
+    margin-bottom: 30px;
+  }
+  #nav-content ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  #nav-input:checked ~ #nav-close {
+    display: block;
+  }
+  #nav-input:checked ~ #nav-content {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 600px) {
+  .footer-in {
+    padding-top: 50px;
+    font-size: 1.2rem;
+  }
+  .decoration img {
+    height: 60px;
+  }
+  .pagetop {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+/*========= LoadingのためのCSS ===============*/
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  background: #FEFCF3;
+  text-align: center;
+  color: #fff;
+  top: 0;
+}
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width: 260px;
+}
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  #splash_logo img {
+    width: 120px;
+  }
+  #nav-drawer {
+    padding-top: 15px;
+  }
+}

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+  padding-top: 0;
+}
+.section-top__image {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/top/top_img.JPG");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.entry-content p {
+  padding-top: 20px;
+}
+.entry {
+  margin: 0 auto;
+  max-width: 90vw;
+}
+.entry-content {
+  position: absolute;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  width: 80%;
+  bottom: 70px;
+}
+.next-about {
+  text-align: right;
+  margin-top: 20px;
+}
+.next-about {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+@media(min-width: 550px) {
+  .entry-content {
+    display: flex;
+    bottom: 30px;
+  }
+  .top-r-box {
+    margin-left: 30px;
+  }
+  .next-about {
+    position: fixed;
+    bottom: 30px;
+    left: 80vw;
+  }
+}
+@media(max-width: 750px) {
+  .top-r-box {
+    display: none;
+  }
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.button a {
+  color: #fff;
+  text-decoration: none;
+}
+.yazirusi {
+  width: 30px;
+  height: 8px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: skew(45deg);
+}
